@@ -55,6 +55,9 @@
     background-image: url('../img/cat.png')
     background-repeat: no-repeat
     background-position: bottom left
+    @include media("retina2x")
+      background-image: url('../img/cat@2x.png')
+      background-size: 100%
 
   &__header-title
     position: absolute
@@ -195,5 +198,8 @@
     background-color: $card-disabled
   .card__content
     background-image: url('../img/cat_transparent.png')
+    @include media("retina2x")
+      background-image: url('../img/cat_transparent@2x.png')
+      background-size: 100%
 
 

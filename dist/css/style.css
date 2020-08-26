@@ -433,6 +433,10 @@ html {
     background-image: url("../img/cat.png");
     background-repeat: no-repeat;
     background-position: bottom left; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .card__content {
+        background-image: url("../img/cat@2x.png");
+        background-size: 100%; } }
   .card__header-title {
     position: absolute;
     top: 16px;
@@ -559,5 +563,9 @@ html {
     background-color: #b3b3b3; }
   .card--disabled .card__content {
     background-image: url("../img/cat_transparent.png"); }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .card--disabled .card__content {
+        background-image: url("../img/cat_transparent@2x.png");
+        background-size: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
