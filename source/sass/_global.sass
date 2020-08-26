@@ -2,3 +2,27 @@ html
   font-size: 62.5%
   *
     box-sizing: border-box
+
+.page
+  min-height: 100vh
+  width: 100%
+  &--default-pattern
+    background-image: url('../img/pattern.png')
+    box-shadow: inset 14px 300px 224px -56px rgba(0,0,0,0.51), inset 14px -300px 224px -56px rgba(0,0,0,0.51)
+
+.dotted-underline
+  position: relative
+  &:after
+    content: ""
+    position: absolute
+    bottom: -1px
+    left: 0
+    right: 0
+    height: 1px
+    background-color: transparent
+    border-bottom: dashed 1px $card-color
+    transition: border $transition
+  &:hover
+    &:after
+      border-bottom: dashed 1px $card-color-hover
+

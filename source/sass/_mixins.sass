@@ -1,0 +1,15 @@
+@mixin container
+  box-sizing: border-box
+  width: 1120px
+  margin: 0 auto 0
+  @include media("<large")
+    width: 1024px
+    margin: 0 auto 0
+    padding: 0 15px
+  @include media("<desktop")
+    width: 100%
+
+@mixin resetlist
+  padding-left: 0
+  margin: 0
+  list-style: none

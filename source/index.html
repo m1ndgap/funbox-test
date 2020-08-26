@@ -1,5 +1,120 @@
 
 
 //= ./html-components/_header.html
+<main class="page page--default-pattern">
+    <section class="cards">
+        <h1 class="cards__title">Ты сегодня покормил кота?</h1>
+        <div class="cards__container">
+            <article class="cards__item card"  data-cardtype="not-selected">
+                <div class="card__content-wrapper">
+                    <div class="card__header">
+                        <div class="card__header-corner"></div>
+                        <div class="card__header-rect">
+                            <span class="card__header-title">Сказочное заморское яство</span>
+                            <span class="card__header-title card__header-title--hover">Котэ не одобряет?</span>
+                        </div>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__content-wrapper">
+                            <h2 class="card__title">Нямушка</h2>
+                            <span class="card__subtitle">с фуа-гра</span>
+                            <ul class="card__list">
+                                <li class="card__list-item">
+                                    <span class="card__list-highlight">10</span> порций
+                                </li>
+                                <li class="card__list-item">мышь в подарок</li>
+                            </ul>
+
+                            <div class="card__circle">
+                                <span class="card__circle-value">0,5</span>
+                                <span class="card__circle-subtitle">кг</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="card__footer">
+                    <span class="card__pitch-text">
+                        Чего сидишь? Порадуй котэ,
+                        <a class="card__footer-link" href="#"><span class="dotted-underline">купи</span>.</a>
+                    </span>
+                    <span class="card__desc-text">Печень утки разварная с артишоками.</span>
+                    <span class="card__disabled-text">Печалька, с фуа-гра закончился.</span>
+                </footer>
+            </article>
+            <article class="cards__item card card--selected" data-cardtype="selected">
+                <div class="card__content-wrapper">
+                    <div class="card__header">
+                        <div class="card__header-corner"></div>
+                        <div class="card__header-rect"><span class="card__header-title">Сказочное заморское яство</span>
+                            <span class="card__header-title card__header-title--hover">Котэ не одобряет?</span></div>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__content-wrapper">
+                            <h2 class="card__title">Нямушка</h2>
+                            <span class="card__subtitle">с рыбой</span>
+                            <ul class="card__list">
+                                <li class="card__list-item">
+                                    <span class="card__list-highlight">10</span> порций
+                                </li>
+                                <li class="card__list-item">2 мыши в подарок</li>
+                            </ul>
+                            <div class="card__circle">
+                                <span class="card__circle-value">2</span>
+                                <span class="card__circle-subtitle">кг</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="card__footer">
+                    <span class="card__pitch-text">
+                        Чего сидишь? Порадуй котэ,
+                        <a class="card__footer-link" href="#"><span class="dotted-underline">купи</span>.</a>
+                    </span>
+                    <span class="card__desc-text">Головы щучьи с чесноком да свежайшая сёмгушка.</span>
+                    <span class="card__disabled-text">Печалька, с рыбой закончился.</span>
+                </footer>
+            </article>
+            <article class="cards__item card card--disabled" data-cardtype="disabled">
+                <div class="card__content-wrapper">
+                    <div class="card__header">
+                        <div class="card__header-corner"></div>
+                        <div class="card__header-rect">
+                            <span class="card__header-title">Сказочное заморское яство</span>
+                            <span class="card__header-title card__header-title--hover">Котэ не одобряет?</span>
+                        </div>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__content-wrapper">
+                            <h2 class="card__title">Нямушка</h2>
+                            <span class="card__subtitle">с курой</span>
+                            <ul class="card__list">
+                                <li class="card__list-item">
+                                    <span class="card__list-highlight">10</span> порций
+                                </li>
+                                <li class="card__list-item">мышь в подарок</li>
+                                <li class="card__list-item">заказчик доволен</li>
+                            </ul>
+                            <div class="card__circle">
+                                <span class="card__circle-value">5</span>
+                                <span class="card__circle-subtitle">кг</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="card__footer">
+                    <span class="card__pitch-text">
+                        Чего сидишь? Порадуй котэ,
+                        <a class="card__footer-link" href="#">
+                            <span class="dotted-underline">купи</span>.</a>
+                    </span>
+                    <span class="card__desc-text">Филе из цыплят с трюфелями в бульоне.</span>
+                    <span class="card__disabled-text">Печалька, с курой закончился.</span>
+                </footer>
+            </article>
+        </div>
+    </section>
+</main>
+
+<script src="./js/cards.js"></script>
 </body>
 </html>

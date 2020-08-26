@@ -1,0 +1,199 @@
+.card
+  width: 320px
+  max-width: 320px
+  font-family: "Trebuchet", sans-serif
+  cursor: pointer
+  &:focus, &:active
+    outline: none
+  @include media("<desktop")
+    margin: 0 30px 30px
+  @include media("<tiny")
+    margin: 30px 0
+
+
+  &__header
+    position: relative
+    bottom: -1px // ie hacks
+    height: 44px
+    display: flex
+    z-index: 1
+
+  &__header-rect, &__header-corner, &__content
+    border: 4px solid $card-color
+    background-color: $white
+    transition: border $transition
+
+  &__header-corner
+    position: absolute
+    top: 17px
+    left: 3px
+    width: 60px
+    height: 33px
+    background-color: $white
+    border: none
+    border-top: 3px solid $card-color
+    transform: rotate(-45deg)
+
+
+  &__header-rect
+    position: relative
+    width: 100%
+    margin-left: 43px
+    padding-left: 4px
+    max-width: 278px
+    border-radius: 0 12px 0 0
+    border-bottom: none
+    border-left: none
+
+  &__content
+    position: relative
+    padding: 3px 43px 0
+    height: 437px
+    border-radius: 0 0 12px 12px
+    border-top: none
+    z-index: 2
+    background-image: url('../img/cat.png')
+    background-repeat: no-repeat
+    background-position: bottom left
+
+  &__header-title
+    position: absolute
+    top: 16px
+    display: block
+    font-size: 1.6rem
+    transition: opacity $transition
+    &--hover
+      color: $card-selected-hover
+      opacity: 0
+
+
+
+  &__title
+    margin: 0
+    font-size: 4.8rem
+    font-weight: 600
+
+  &__subtitle
+    font-size: 2.4rem
+    line-height: 2.8rem
+    font-weight: 600
+
+  &__list
+    @include resetlist()
+    margin-top: 13px
+
+  &__list-item
+    font-size: 1.4rem
+    color: $light-text
+
+  &__list-highlight
+    font-weight: 600
+
+  &__circle
+    position: absolute
+    right: 13px
+    bottom: 12px
+    display: flex
+    flex-flow: column nowrap
+    justify-content: flex-start
+    align-items: center
+    height: 80px
+    width: 80px
+    padding-top: 8px
+    border-radius: 50%
+    background-color: $card-color
+    color: $white
+    transition: background-color $transition
+
+  &__circle-value
+    font-size: 4.2rem
+
+  &__circle-subtitle
+    font-size: 2.1rem
+    line-height: 60%
+
+  &__footer
+    position: relative
+    font-size: 1.3rem
+    color: $white
+    height: 30px
+    cursor: default
+    pointer-events: none
+
+  &__pitch-text, &__desc-text, &__disabled-text
+    position: absolute
+    width: 100%
+    bottom: 0
+    right: 50%
+    transform: translateX(50%)
+    text-align: center
+    transition: opacity $transition
+    pointer-events: none
+
+  &__footer-link
+    color: $card-color
+    text-decoration: none
+    transition: color $transition
+    pointer-events: all
+    &:hover
+      color: $card-color-hover
+
+  &__desc-text, &__disabled-text
+    opacity: 0
+    pointer-events: none
+
+  &__disabled-text
+    color: $warning-text
+
+
+  &:focus, &:active
+    outline: none
+  &__content-wrapper
+    &:hover
+      .card__header-corner
+        border-color: $card-color-hover
+      .card__header-rect, .card__content
+        border-color: $card-color-hover
+      .card__circle
+        background-color: $card-color-hover
+
+.card--selected
+  .card__header-corner
+    border-color: $card-selected
+  .card__header-rect, .card__content
+    border-color: $card-selected
+  .card__circle
+    background-color: $card-selected
+  .card__content-wrapper
+    &:hover
+      .card__header-corner
+        border-color: $card-selected-hover
+      .card__header-rect, .card__content
+        border-color: $card-selected-hover
+      .card__circle
+        background-color: $card-selected-hover
+      .card__header-title
+        opacity: 0
+      .card__header-title--hover
+        opacity: 1
+        transition: opacity $transition
+
+.card--disabled
+  color: $disabled-text
+  pointer-events: none
+  .card__title, .card__subtitle, .card__list-item
+    color: $disabled-text
+  .card__pitch-text
+    opacity: 0
+  .card__disabled-text
+    opacity: 1
+  .card__header-rect, .card__content
+    border-color: $card-disabled
+  .card__header-corner
+    border-color: $card-disabled
+  .card__circle
+    background-color: $card-disabled
+  .card__content
+    background-image: url('../img/cat_transparent.png')
+
+

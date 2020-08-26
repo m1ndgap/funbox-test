@@ -1,0 +1,22 @@
+.page
+  display: flex
+  justify-content: center
+  align-items: center
+
+.cards__title
+  font-family: "Exo20", sans-serif
+  font-size: 3.6rem
+  font-weight: normal
+  text-align: center
+  color: $white
+
+.cards
+  width: 100% //ie 11 hack
+
+.cards__container
+  @include container()
+  display: flex
+  justify-content: space-between
+  @include media("<desktop")
+    flex-flow: row wrap
+    justify-content: space-around
