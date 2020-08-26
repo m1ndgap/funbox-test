@@ -318,7 +318,7 @@ html {
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       .page--default-pattern {
         background-image: url("../img/Pattern@2x.png");
-        background-size: 100%; } }
+        background-size: 210px; } }
 
 .dotted-underline {
   position: relative; }
@@ -440,7 +440,7 @@ html {
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       .card__content {
         background-image: url("../img/cat@2x.png");
-        background-size: 100%; } }
+        background-size: 298px; } }
   .card__header-title {
     position: absolute;
     top: 16px;
@@ -570,6 +570,6 @@ html {
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       .card--disabled .card__content {
         background-image: url("../img/cat_transparent@2x.png");
-        background-size: 100%; } }
+        background-size: 298px; } }
 
 /*# sourceMappingURL=style.css.map */
