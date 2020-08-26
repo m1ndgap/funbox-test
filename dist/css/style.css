@@ -534,6 +534,12 @@ html {
 .card--selected .card__circle {
   background-color: #d91667; }
 
+.card--selected .card__pitch-text {
+  opacity: 0; }
+
+.card--selected .card__desc-text {
+  opacity: 1; }
+
 .card--selected .card__content-wrapper:hover .card__header-corner {
   border-color: #e62e7a; }
 
