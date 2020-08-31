@@ -390,8 +390,6 @@ html {
   max-width: 320px;
   font-family: "Trebuchet", sans-serif;
   cursor: pointer; }
-  .card:focus, .card:active {
-    outline: none; }
   @media (max-width: 1023px) {
     .card {
       margin: 0 30px 30px; } }
@@ -537,6 +535,9 @@ html {
 
 .card--selected .card__pitch-text {
   opacity: 0; }
+
+.card--selected .card__footer-link {
+  pointer-events: none; }
 
 .card--selected .card__desc-text {
   opacity: 1; }

@@ -27,12 +27,6 @@ if (!Element.prototype.closest) {
     };
 }
 
-let viewport = document.body.clientWidth;
-
-window.addEventListener('resize', function(){
-    viewport = document.body.clientWidth;
-})
-
 const cards = document.querySelectorAll('.card__content-wrapper');
 const links = document.querySelectorAll('.card__footer-link');
 

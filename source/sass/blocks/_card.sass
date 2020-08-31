@@ -3,8 +3,6 @@
   max-width: 320px
   font-family: "Trebuchet", sans-serif
   cursor: pointer
-  &:focus, &:active
-    outline: none
   @include media("<desktop")
     margin: 0 30px 30px
   @include media("<tiny")
@@ -170,6 +168,8 @@
     background-color: $card-selected
   .card__pitch-text
     opacity: 0
+  .card__footer-link
+    pointer-events: none
   .card__desc-text
     opacity: 1
   .card__content-wrapper
