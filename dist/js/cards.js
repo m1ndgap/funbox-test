@@ -33,36 +33,27 @@ window.addEventListener('resize', function(){
     viewport = document.body.clientWidth;
 })
 
-let cards = document.querySelectorAll('.card__content-wrapper');
-let links = document.querySelectorAll('.card__footer-link');
+const cards = document.querySelectorAll('.card__content-wrapper');
+const links = document.querySelectorAll('.card__footer-link');
 
 cards.forEach(function(cardwrap){
     cardwrap.addEventListener('click', function(){
         let card = this.closest('.card');
         let type = card.dataset.cardtype;
         if (type == 'selected') {
-            if (viewport > 1024) {
-                card.dataset.cardtype = 'not-selected'
-            } else {
-                card.dataset.cardtype = 'not-selected'
-                card.classList.remove('card--selected')
-            }
+            card.dataset.cardtype = 'not-selected'
+            card.classList.remove('card--selected')
         } else if (type == 'not-selected') {
-            if (viewport > 1024) {
-                card.dataset.cardtype = 'selected'
-            } else {
-                card.dataset.cardtype = 'selected'
-                card.classList.add('card--selected')
-            }
+            card.dataset.cardtype = 'selected'
+            card.classList.add('card--selected')
+            card.classList.add('card--selected-no-hover')
         }
     })
     cardwrap.addEventListener('mouseleave', function () {
         let card = this.closest('.card');
         let type = card.dataset.cardtype;
         if (type == 'selected') {
-            card.classList.add('card--selected')
-        } else if (type == 'not-selected') {
-            card.classList.remove('card--selected')
+            card.classList.remove('card--selected-no-hover')
         }
     })
 })

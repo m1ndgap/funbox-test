@@ -449,7 +449,8 @@ html {
     transition: opacity 300ms; }
     .card__header-title--hover {
       color: #e62e7a;
-      opacity: 0; }
+      opacity: 0;
+      transition: opacity 300ms; }
   .card__title {
     margin: 0;
     font-size: 4.8rem;
@@ -553,8 +554,13 @@ html {
   opacity: 0; }
 
 .card--selected .card__content-wrapper:hover .card__header-title--hover {
-  opacity: 1;
-  transition: opacity 300ms; }
+  opacity: 1; }
+
+.card--selected-no-hover .card__content-wrapper:hover .card__header-title {
+  opacity: 1; }
+
+.card--selected-no-hover .card__content-wrapper:hover .card__header-title--hover {
+  opacity: 0; }
 
 .card--disabled {
   color: #d4d4d4;

@@ -68,6 +68,7 @@
     &--hover
       color: $card-selected-hover
       opacity: 0
+      transition: opacity $transition
 
 
 
@@ -183,7 +184,18 @@
         opacity: 0
       .card__header-title--hover
         opacity: 1
-        transition: opacity $transition
+
+
+
+.card--selected-no-hover
+  .card__content-wrapper
+    &:hover
+      .card__header-title
+        opacity: 1
+      .card__header-title--hover
+        opacity: 0
+
+
 
 .card--disabled
   color: $disabled-text
