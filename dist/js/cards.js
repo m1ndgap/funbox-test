@@ -43,6 +43,7 @@ cards.forEach(function(cardwrap){
         if (type == 'selected') {
             card.dataset.cardtype = 'not-selected'
             card.classList.remove('card--selected')
+            card.classList.remove('card--selected-no-hover')
         } else if (type == 'not-selected') {
             card.dataset.cardtype = 'selected'
             card.classList.add('card--selected')
